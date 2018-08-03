@@ -16,8 +16,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     List<Person> list;
     Context context;
-    MyAdapter (Context context, ArrayList<Person> list)
-    {
+
+    MyAdapter(Context context, ArrayList<Person> list) {
         this.context = context;
         this.list = list;
     }
@@ -33,9 +33,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
 
-        myViewHolder.name.setText( list.get(i).getName() );
-        myViewHolder.desc.setText( list.get(i).getDesc() );
-        myViewHolder.uid.setText( list.get(i).getUid()+"" );
+        myViewHolder.name.setText(list.get(i).getName());
+        myViewHolder.desc.setText(list.get(i).getDesc());
+        myViewHolder.date.setText(list.get(i).getDate());
+        myViewHolder.time.setText(list.get(i).getTime());
+        myViewHolder.uid.setText(list.get(i).getUid() + "");
         myViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,13 +53,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView name, desc, uid;
+        TextView name, desc, uid, date, time;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.name);
             desc = itemView.findViewById(R.id.desc);
             uid = itemView.findViewById(R.id.uid);
+            date = itemView.findViewById(R.id.date);
+            time = itemView.findViewById(R.id.time);
         }
 
     }
