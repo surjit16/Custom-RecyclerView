@@ -79,7 +79,7 @@ public class SettingActivity extends AppCompatActivity {
         if (item.getItemId() == android.R.id.home)
         {
             setResult(101);
-            Toast.makeText(this, "aaaaaaaaaa", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Updating View", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -87,7 +87,7 @@ public class SettingActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         setResult(101);
-        Toast.makeText(this, "bbb", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Updating View", Toast.LENGTH_SHORT).show();
 
         super.onBackPressed();
     }

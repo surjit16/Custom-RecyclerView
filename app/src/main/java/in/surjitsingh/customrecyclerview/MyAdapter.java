@@ -1,6 +1,7 @@
 package in.surjitsingh.customrecyclerview;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -63,6 +64,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     class MyViewHolder extends RecyclerView.ViewHolder {
         TextView name, desc, date, time;
         ImageView uid;
+
 
         MyViewHolder(@NonNull View itemView) {
             super(itemView);

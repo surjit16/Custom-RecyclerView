@@ -5,7 +5,7 @@ public class Person {
     private String name, desc, date, time;
     private int uid;
 
-    Person(String name, String desc, String date, String time, int uid) {
+    public Person(String name, String desc, String date, String time, int uid) {
         this.name = name;
         this.desc = desc;
         this.date = date;
